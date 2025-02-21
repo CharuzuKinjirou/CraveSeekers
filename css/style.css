@@ -1,0 +1,454 @@
+
+
+/* CSS for All */
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.img-responsive{
+    width: 100%;
+}
+.img-curve{
+    border-radius: 15px;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-white{
+    color: white;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+a{
+    color: #ff6b81;
+    text-decoration: none;
+}
+a:hover{
+    color: #ff4757;
+}
+
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.btn-primary{
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    color: white;
+    background-color: #ff4757;
+}
+h2{
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+h1{
+    color: #333;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+h3{
+    color: #333;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+.float-container{
+    position: relative;
+}
+.float-text{
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+.error{
+    padding: 2%;
+    color: red;
+}
+.success{
+    padding: 2%;
+    color: green;
+}
+
+/* CSSS for navbar section */
+
+.logo{
+    width: 10%;
+    float: left;
+}
+.menu{
+    line-height: 110px;
+    font-size: 1rem;
+}
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+/*slider start*/
+.home .home-slider .slide
+{
+    display: flex;
+    align-items: center;
+    height: 120vh;
+    justify-content: flex-start;
+}
+
+.home .home-slider .slide1
+{
+    background-image: url(../images/book-a-table.jpg);
+}
+
+.home .home-slider .slide2
+{
+    background-image: url(../images/menubg.jpg);
+}
+
+.home .home-slider .slide3
+{
+    background-image: url(../images/staffbg.png);
+}
+
+.home .home-slider .slide1,
+.home .home-slider .slide2,
+.home .home-slider .slide3
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    size-adjust: auto;
+}
+.home .home-slider .slide .content
+{
+    text-align: center;
+    padding-left: 1rem;
+}
+.home .home-slider .slide .content h3
+{
+    color: #cdaa7c;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.home .home-slider .slide .content h1
+{
+    color: #fff;
+    font-size: 7rem;
+}
+.home .home-slider .slide .content p
+{
+    color: #e6e7e7;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.btnslider
+{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    border: .1rem solid rgba(205,170,124,0.2);
+    background: transparent;
+    cursor: pointer;
+    padding: .8rem 1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+   
+}   
+.btnslider::before
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(#cdaa7c);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: .5s;
+}
+.btnslider:hover.btn::before
+{
+    left: 0;
+}
+.swiper-pagination-bullet
+{
+    background: var( #e6e7e7)!important;
+    width: 15px!important;
+    height: 15px!important;
+    border-radius: 0!important;
+}
+/*slider end*/
+
+
+/*owner style start*/
+
+
+.our-chef
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid-gap: 1.5rem;
+}
+.our-chef .item .image img
+{
+    width: 100%;
+}
+.our-chef .item
+{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.our-chef .item::before
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
+}
+.our-chef .item:hover.item::before
+{
+    display: block;
+}
+.our-chef .item .chef-info
+{
+    position: absolute;
+    top: 130%;
+    left: 0;right: 0;bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    align-items: center;
+    transition: 1s;
+    cursor: pointer;
+}
+.our-chef .item .chef-info h3
+{
+    font-size: 1.7rem;
+    color: #fff;
+    padding: .8rem 0;
+    text-transform: uppercase;
+}
+.our-chef .item .chef-info span
+{
+    font-size: 1.7rem;
+    color: #e6e7e7;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.our-chef .item .chef-info ul
+{
+    list-style: none;
+    display: flex;
+    grid-gap: 2rem;
+    padding: 3rem 0;
+}
+.our-chef .item .chef-info ul li a
+{
+    color: #b9b9b9;
+    font-size: 1.8rem;
+}
+.our-chef .item:hover .chef-info
+{
+    top: 0;
+}
+/*owner style end*/
+
+/* CSS for Food SEarch Section */
+
+.food-search{
+    background-image: url(../images/slideshow-11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.food-search input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* CSS for Categories */
+.categories{
+    padding: 4% 0;
+}
+
+.box-3{
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+.box-3 .img-responsive:hover
+{
+    transform: scale(1.1);
+}
+
+
+
+
+/* CSS for Food Menu */
+.food-menu{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
+
+/* CSS for Social */
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+/* for Order Section */
+.order{
+    width: 50%;
+    margin: 0 auto;
+}
+.input-responsive{
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.order-label{
+    margin-bottom: 1%; 
+    font-weight: bold;
+}
+
+
+
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width:768px){
+    .logo{
+        width: 80%;
+        float: none;
+        margin: 1% auto;
+    }
+
+    .menu ul{
+        text-align: center;
+    }
+
+    .food-search input[type="search"]{
+        width: 90%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+
+    .btn{
+        width: 91%;
+        padding: 2%;
+    }
+
+    .food-search{
+        padding: 10% 0;
+    }
+
+    .categories{
+        padding: 20% 0;
+    }
+    h2{
+        margin-bottom: 10%;
+    }
+    .box-3{
+        width: 100%;
+        margin: 4% auto;
+    }
+
+    .food-menu{
+        padding: 20% 0;
+    }
+
+    .food-menu-box{
+        width: 90%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+    .social{
+        padding: 5% 0;
+    }
+    .order{
+        width: 100%;
+    }
+}
